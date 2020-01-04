@@ -11,7 +11,7 @@ body, html {
   color: #777;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
   position: relative;
   opacity: 0.65;
   background-attachment: fixed;
@@ -21,17 +21,21 @@ body, html {
 
 }
 .bgimg-1 {
-  background-image: url("img_parallax.jpg");
+  background-image: url("https://i.ibb.co/ymC9BRm/IMG-20191121-195116.jpg");
   min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("img_parallax2.jpg");
+  background-image: url("https://i.ibb.co/MhZvN7v/IMG-20191110-190758.jpg");
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("img_parallax3.jpg");
+  background-image: url("https://i.ibb.co/QM1XcgT/IMG-20191126-232353.jpg");
+  min-height: 400px;
+}
+.bgimg-4 {
+  background-image: url("https://i.ibb.co/863XfMf/23-41-02-images.jpg");
   min-height: 400px;
 }
 
@@ -59,11 +63,46 @@ h3 {
   color: #111;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
+a {
+  display: block;
+  margin: auto;
+  padding: 1rem 1.25rem;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: all .3s cubic-bezier(.2, 0, 0, 1);
+  z-index: 1;
+  
+  &:after {
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 1.25rem;
+    left: 1.25rem;
+    background-color: #ffffff;
+    transition: all .3s cubic-bezier(.2, 0, 0, 1);
+    transform-origin: bottom center;
+    z-index: -1;
   }
+  
+  &:hover {
+    color: #2D2D2D;
+    
+    &:after {
+      right: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+  .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+	}
 }
 </style>
 </head>
@@ -82,31 +121,39 @@ h3 {
 
 <div class="bgimg-2">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Its just a passion.</span>
   </div>
 </div>
 
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Example of my works: www.thegobblez.com, www.gmlojistik.com, www.sedtrans.com</p>
+  <div class="container">
+  <a href="http://gmlojistik.com">GM LOGISTIC</a><br><a href="http://sedtrans.com">SEDTRANS</a><br><a href="http://thegobblez.com">The Gobblez Gamer Community	</a>
+</div>
   </div>
 </div>
 
 <div class="bgimg-3">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Currently working on:</span>
   </div>
 </div>
 
 <div style="position:relative;">
   <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  <p><center><strong>Survivor</strong><center><br>
+  <img src = "https://github.com/valkyrienyanko/Survivor/blob/master/preview.gif?raw=true"><br>
+  <strong>Description<br></strong>
+Forage and explore infinite procedurally generated worlds in a unique RTS experience.<br>
+
+<strong>Lore<br></strong>
+You crashland on the surface of a planet. You have nothing, you're alone, what do you do?</p>
   </div>
 </div>
 
-<div class="bgimg-1">
+<div class="bgimg-4">
   <div class="caption">
-  <span class="border">COOL!</span>
+  <span class="border">o/</span>
   </div>
 </div>
 
